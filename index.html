@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mam nadzieję, że Ci się podoba</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="ambiance" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div id="sparkles"></div>
+    </div>
+
+    <main class="stage">
+        <section id="screen-welcome" class="screen active" aria-label="Powitanie">
+            <p class="eyebrow">Kakao tylko dla Ciebie</p>
+            <h1>Ale jeszcze szybkie pytanko…</h1>
+            <button class="btn" type="button" data-go="screen-choice">Przejdź dalej</button>
+        </section>
+
+        <section id="screen-choice" class="screen" aria-label="Wybór kubka" inert>
+            <p class="eyebrow">Najważniejsza rzecz…</p>
+            <h1>W jakim kubku?</h1>
+
+            <div class="mugs-container">
+                <button class="mug-card" type="button" data-mug="kitty">
+                    <div class="photo-mug kitty is-preview">
+                        <img src="hello_kitty.png" alt="Kubek Hello Kitty">
+                    </div>
+                    <span class="mug-name">Hello Kitty</span>
+                </button>
+
+                <button class="mug-card" type="button" data-mug="leon">
+                    <div class="photo-mug leon is-preview">
+                        <img src="leon_kennedy.png" alt="Kubek Leon Kennedy">
+                    </div>
+                    <span class="mug-name">Leon Kennedy</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="screen-loading" class="screen" aria-label="Przygotowanie kakao" inert>
+            <h1>Już się za to biorę</h1>
+            <p class="lead" id="loading-flavor">Dobieram odpowiednie proporcję...</p>
+
+            <div class="loading-wrap">
+                <div class="loading-container">
+                    <div class="loading-bar" id="loading-bar"></div>
+                </div>
+                <p class="loading-text">Przygotowuję Ci kakao</p>
+            </div>
+        </section>
+
+        <section id="screen-ready" class="screen" aria-label="Gotowe kakao" inert>
+            <p class="eyebrow">Proszę bardzo</p>
+            <h1>Tylko uważaj bo gorące</h1>
+
+            <div class="ready-mug-wrap">
+                <div class="photo-mug is-ready" id="ready-mug">
+                    <img class="mug-empty" id="mug-empty" alt="">
+                    <img class="mug-full" id="mug-full" alt="">
+                    <div class="steam-cloud on-mug" aria-hidden="true">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn" type="button" id="drink-btn">Wypij kakao</button>
+            <div class="afterglow" id="afterglow" hidden>
+                <p class="hearts">✨ ☕ ✨</p>
+                <p class="afterglow-text" id="afterglow-text">Chcesz może jeszcze jedno??</p>
+                <button class="btn btn-ghost" type="button" id="again-btn">jeszcze jedno</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
