@@ -283,8 +283,8 @@ h1 {
 }
 
 .photo-mug.is-ready.leon {
-    width: min(195px, 50vw);
-    left: 16px;
+    width: min(245px, 100vw);
+    left: 35px;
 }
 
 .photo-mug.is-ready .mug-empty {
@@ -337,13 +337,13 @@ h1 {
 
 .photo-mug.kitty .steam-cloud.on-mug {
     left: 50%;
-    top: -3%;
-    width: 28%;
+    top: -17%;
+    width: 35%;
 }
 
 .photo-mug.leon .steam-cloud.on-mug {
-    left: 52%;
-    top: -4%;
+    left: 40%;
+    top: 0%;
     width: 30%;
 }
 
